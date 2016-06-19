@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class mainClass {
 	static int[][] train;
 	static int[][] test;
+	static int dataCount;
 	static int TP;
 	static int FP;
 	static int TN;
@@ -74,6 +75,7 @@ public class mainClass {
 			String text = sc.next();
 			String[] lines =  text.split("\n");
 			train = new int[lines.length][]; 
+			dataCount = lines.length;
 			for (int i=0;i<lines.length;i++)
 			{
 				String [] line = lines[i].split("  ");
@@ -98,7 +100,6 @@ public class mainClass {
 	private static svm_model svmTrain() {
 	    svm_problem prob = new svm_problem();
 	    //set size of training dataset
-	    int dataCount = 6;
 	    prob.y = new double[dataCount];
 	    prob.l = dataCount;
 	    prob.x = new svm_node[dataCount][];     
