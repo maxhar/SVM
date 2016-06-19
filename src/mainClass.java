@@ -98,7 +98,7 @@ public class mainClass {
 	private static svm_model svmTrain() {
 	    svm_problem prob = new svm_problem();
 	    //set size of training dataset
-	    int dataCount = 20;
+	    int dataCount = 6;
 	    prob.y = new double[dataCount];
 	    prob.l = dataCount;
 	    prob.x = new svm_node[dataCount][];     
