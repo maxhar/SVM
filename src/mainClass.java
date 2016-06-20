@@ -17,8 +17,8 @@ public class mainClass {
 		FP = 0;
 		FN =0;
 		TN = 0;
-		loadDataset("Dataset.txt");
-		loadTestDS("Dataset2.txt");
+		loadDataset("Dataset/Dataset.txt");
+		loadTestDS("Dataset/Dataset2.txt");
 		System.out.print("Data Set Loaded!\n Svm Training. . . \n");
 	  
 		svm_model xvm = svmTrain();
