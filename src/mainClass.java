@@ -23,15 +23,20 @@ public class mainClass {
 	  
 		svm_model xvm = svmTrain();
 		System.out.println("SVM Trained!");
+		long time = 0;
+		long startTime;
 		for(int i=0;i<test.length;i++)
-		{
+		{    startTime =System.nanoTime();
 			evaluate(test[i], xvm);
+			time = time + (System.nanoTime()- startTime);
 			
 		}
+		long avgTime = time / test.length;
 	    System.out.println("TP : "+ TP);
 	    System.out.println("False P : "+ FP);
 	    System.out.println("TN : "+ TN);
 	    System.out.println("False N : "+ FN);
+	    System.out.println("Avg Testing Time : "+ avgTime );
 	    while(true)
 	    {
 	    	
